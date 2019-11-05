@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Dhaka Stock Exchange</title>
+    <link rel="icon" href="img/dse_logo_small.jpg" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="css/animate.css" />
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <!-- themify CSS -->
+    <link rel="stylesheet" href="css/themify-icons.css" />
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="css/slick.css" />
+    <!-- style CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- style body row-column CSS -->
+    <link rel="stylesheet" href="myExternalFiles/css/body_row_column_style.css" />
+
+    <!-- google charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages: ['corechart', 'line']});
+      google.charts.setOnLoadCallback(drawBasic);
+
+      function drawBasic() {
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('number', 'X');
+            data.addColumn('number', 'stocks');
+
+            data.addRows([
+              [0, 0],   [1, 10],  [2, 23],  [3, 50],  [4, 18],  [5, 9],
+              [6, 11],  [7, 27],  [8, 33],  [9, 40],  [10, 32], [11, 35],
+              [12, 30], [13, 40], [14, 42], [15, 47], [16, 44], [17, 48],
+              [18, 52], [19, 54], [20, 42], [21, 55], [22, 56], [23, 57],
+              [24, 60], [25, 50], [26, 52], [27, 51], [28, 49], [29, 53],
+              [30, 55], [31, 60], [32, 61], [33, 59], [34, 62], [35, 65],
+              [36, 62], [37, 58], [38, 55], [39, 61], [40, 64], [41, 65],
+              [42, 63], [43, 66], [44, 67], [45, 69], [46, 69], [47, 70],
+              [48, 72], [49, 68], [50, 66], [51, 65], [52, 67], [53, 70],
+              [54, 71], [55, 72], [56, 73], [57, 75], [58, 70], [59, 68],
+              [60, 64], [61, 60], [62, 65], [63, 54], [64, 68], [65, 69],
+              [66, 70], [67, 72], [68, 75], [69, 80]
+            ]);
+
+            var options = {
+              hAxis: {
+                title: 'Time'
+              },
+              vAxis: {
+                title: 'Stock'
+              }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+            chart.draw(data, options);
+          }
+    </script>
+  </head>
+
+  <body>
+    <!--::header part start::-->
+    <header class="main_menu home_menu">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-12">
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <a class="navbar-brand" href="index.html">
+                <img src="img/dse_logo.png" alt="logo" />
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="ti-menu"></span>
+              </button>
+
+              <div
+                class="collapse navbar-collapse main-menu-item justify-content-center"
+                id="navbarSupportedContent"
+              >
+                <ul class="navbar-nav align-items-center">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="services.html">Market Updates</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Investor Guide </a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="blog.html"
+                      id="navbarDropdown"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Rules & Regulations
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="project.html">TREC Regulations</a>
+                      <a class="dropdown-item" href="single-blog.html"
+                        >Corporate Governance Code</a
+                      >
+                      <a class="dropdown-item" href="elements.html">Securities Related Laws</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <strong><p id="time" style="text-align: center; color: #ffffff; font-size: 120%;"></p></strong>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header part end-->
+
+    <!-- banner part start-->
+    <section class="banner_part">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 offset-lg-1">
+            <div class="banner_text">
+              <div class="banner_text_iner">
+                <h5>Dhaka Stock Exchange Ltd.</h5>
+                <h1>Be Bold And Invest Wisely</h1>
+                <a href="#" class="btn_1">Explore Market</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- banner part end-->
+
+   <!-- our_project part start-->
+    <section class="our_project section_padding" id="portfolio">      
+      <div class="container">
+        <!-- cutted part -->
+
+        <div class="row justify-content-between align-items-center">
+          <div class="col-lg-4">
+            <table>
+                <tr>
+                  <th style=" width: 25%; text-align: center; background-color: #E8311C; font-family: sans-serif;">Market news</th>
+                  <td><marquee ><p style="color: #0000ff; font-size: 150%"><strong>Todays market is closed already.</strong></p></marquee> </div></td>  
+                </tr>                
+              </table>              
+          </div>
+          <div class="col-lg-5 col-md-6">
+            <div class="filters portfolio-filter project_menu_item"> 
+              <form>
+                <input type="text" name="search" placeholder="Search..">
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+             
+            <div class="more_btn d-none d-md-block">
+              <!-- <form>
+                <input type="text" name="search" placeholder="Search..">
+              </form> -->
+              <!-- <a href="#" class="more_btn_iner">more projects</a> -->
+            </div>
+          </div>
+        </div>
+        <br>
+
+        <!-- cutted part -->
+        <div class="filters-content">
+          <div class="row justify-content-between portfolio-grid">
+            <div class="col-lg-6 col-sm-6 all buildings">
+              <div style="overflow-x:auto;">
+              <table>
+                <tr>
+                  <th>Total Trade</th>
+                  <th>Total Volume</th>
+                  <th>Total value in Taka(mn)</th>
+                </tr>
+                <tr>
+                  <td>83274</td>
+                  <td>54781224</td>
+                  <td>2685.067</td>
+                </tr>
+              </table>
+              <br>
+              <table>
+                <tr>
+                  <th>Issues Advanced</th>
+                  <th>Issues declined</th>
+                  <th>Issues Unchanged</th>
+                </tr>
+                <tr>
+                  <td>85</td>
+                  <td>218</td>
+                  <td>49</td>
+                </tr>
+              </table>
+              <br>
+
+              <table>
+                  <tr>
+                    <th>TRADING CODE</th>
+                    <th>LTP</th>
+                    <th>CHANGE</th>
+                    <th>CLOSEP</th>                   
+                  </tr>
+                  <tr>
+                    <td>RECKITTBEN</td>
+                    <td>787.9</td>
+                    <td>15.1</td>
+                    <td>50</td>
+                  </tr>
+                  <tr>
+                    <td>MONNOSTAF</td>
+                    <td>1,784.4</td>
+                    <td>-15.1</td>
+                    <td>124</td>
+                  </tr>
+                  <tr>
+                    <td>GLAXOSMITH</td>
+                    <td>2,757.9</td>
+                    <td>14.1</td>
+                    <td>1,753.5</td>
+                  </tr>
+                  <tr>
+                    <td>MARICO</td>
+                    <td>1,787.9</td>
+                    <td>11.1</td>
+                    <td>1,783.7</td>
+                  </tr>
+              </table>
+            </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-6 all rebuild">
+              <div id="chart_div" style="width: 108%; height: 105%"></div> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="img/animate_icon/icon_2.png" class="animation_icon_2" alt="">          
+    </section>
+    <!-- our_project part end-->
+
+    <!--::client logo part end::-->
+    <section class="client_logo">
+      <div class="container">          
+        <div class="row align-items-center">
+          <div class="col-lg-12">
+            <div
+              class="client_logo_slider owl-carousel d-flex justify-content-between"
+            >
+              <div class="single_client_logo">
+                <img src="img/logo/Logo1.png" alt="" />
+              </div>
+              <div class="single_client_logo">
+                <img src="img/logo/Logo2.png" alt="" />
+              </div>
+              <div class="single_client_logo">
+                <img src="img/logo/Logo3.png" alt="" />
+              </div>
+              <div class="single_client_logo">
+                <img src="img/logo/Logo4.png" alt="" />
+              </div>
+              <div class="single_client_logo">
+                <img src="img/logo/Logo5.png" alt="" />
+              </div>
+              <div class="single_client_logo">
+                <img src="img/logo/Logo6.png" alt="" />
+              </div>
+              <div class="single_client_logo">
+                <img src="img/logo/Logo1.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--::client logo part end::-->
+      
+      
+    <!-- footer part start-->
+    <footer class="footer-area">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-sm-6 col-md-3 col-xl-3">
+            <div class="single-footer-widget footer_1">
+              <a href="index.html">
+                <h5>Dhaka Stock Exchange Ltd.</h5>
+              </a>
+              <ul>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+              <div class="social_icon">
+                <a href="#"><i class="ti-facebook"></i></a>
+                <a href="#"><i class="ti-twitter-alt"></i></a>
+                <a href="#"><i class="ti-dribbble"></i></a>
+                <a href="#"><i class="ti-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 col-md-3">
+            <div class="single-footer-widget footer_2">
+              <h4>Company</h4>
+              <ul>
+                <li>
+                  <a href="#">Media</a>
+                </li>
+                <li>
+                  <a href="#">Carrier</a>
+                </li>
+                <li>
+                  <a href="#">Testimonials</a>
+                </li>
+                <li>
+                  <a href="#">FAQ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 col-md-3">
+            <div class="single-footer-widget footer_2">
+              <h4>Company Information</h4>
+              <ul>
+                <li>
+                  <a href="#">Company Listing</a>
+                </li>
+                <li>
+                  <a href="#">Sector-wise Company List</a>
+                </li>
+                <li>
+                  <a href="#">Companies by Category</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 col-md-3">
+            <div class="single-footer-widget footer_2">
+              <div class="single_contact_info">
+                <h3>Dhaka - Bangladesh</h3>
+                <p>127, Manchaster city, Dhaka</p>
+                <p>+008 728 362 278</p>
+              </div>
+              <div class="single_contact_info">
+                <h3>chittagong - Bangladesh</h3>
+                <p>127, Manchaster city, chittagong</p>
+                <p>+008 728 362 278</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="copyright_part_text text-center">
+              <div class="row">
+                <div class="col-lg-12">
+                  <p class="footer-text m-0">
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This project is made for Academic purpose(CSE 480, ULAB) <i class="ti-heart" aria-hidden="true"></i> by Anindo Dey</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="img/animate_icon/icon_2.png" class="animation_icon_2" alt="">
+
+    </footer>
+    <!-- footer part end-->
+
+
+    <!-- js code for realtime clock start here -->
+    <script type="text/javascript">
+              var timeDisplay = document.getElementById("time");
+
+
+              function refreshTime() {
+                var dateString = new Date().toLocaleString("en-US", {timeZone: "Asia/Dhaka"});
+                var formattedString = dateString.replace(", ", " - ");
+                timeDisplay.innerHTML = formattedString;
+              }
+
+              setInterval(refreshTime, 1000);
+    </script>
+    <!-- js code for realtime clock end here -->
+
+    <!-- jquery plugins here-->
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <!-- popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- easing js -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <!-- isotope js -->
+    <script src="js/isotope.pkgd.min.js"></script>
+    <!-- particles js -->
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <!-- custom js -->
+    <script src="js/custom.js"></script>
+    <!-- my js -->
+    <script src="myExternalFiles/js/realtimeClock.js"></script>
+  </body>
+</html>
